@@ -1,1 +1,3 @@
-console.log('\'Allo \'Allo!');
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("hola");
+})

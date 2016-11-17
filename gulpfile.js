@@ -170,7 +170,6 @@ gulp.task('default', () => {
   runSequence(['clean', 'wiredep'], 'build');
 });
 
-var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
