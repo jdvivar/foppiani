@@ -4,6 +4,7 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import 'mixins';
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -17,21 +18,125 @@
 }
 
 .container {
-  // background: #bbe3c1;
+  max-width: 750px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: #6D6E77;
+  color: #FCFCFC;
+  padding-top: 100px;
+  @include media-breakpoint-up(sm){
+    // padding-top: 150px;
+  }
+}
+
+hr {
+  @extend .container;
+  border-color: #8AA2A9;
+  border-width: 10px;
 }
 
 nav {
-  @extend .container;
+  background-color: $nav-color;
+  border-bottom: 10px solid darken($nav-color, 10%);
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 10;
+
+  @include media-breakpoint-up(sm){
+    box-sizing: content-box;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .logo {
+    padding: 40px 0;
+    @include media-breakpoint-up(sm){
+      padding: 20px 0;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    left: 15px;
+    line-height: 60px;
+    // margin-top: -8px;
+
+    @include media-breakpoint-up(sm){
+      display: none;
+    }
+  }
+
+  a {
+    padding: 10px 0;
+    @include media-breakpoint-up(sm){
+      max-width: 120px;
+      display: inline-block;
+      vertical-align: middle;
+
+    }
+
+    &.section-link {
+      display: none;
+      text-align: left;
+      padding-top: 80px;
+      margin-top: -80px;
+      @include media-breakpoint-up(sm){
+        display: inline-block;
+      }
+    }
+  }
+
+  .lang-selector {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include media-breakpoint-up(sm){
+      float: right;
+      position: relative;
+    }
+  }
 }
 
 main {
-  @extend .container;
+  padding-bottom: $section-spacing-mobile/2;
+  margin-bottom: $section-spacing-mobile/2;
+
+  @include media-breakpoint-up(sm){
+    padding-bottom: $section-spacing-desktop/2;
+    margin-bottom: $section-spacing-desktop/2;
+  }
 }
 
 section {
-  @extend .container;
+  padding-bottom: $section-spacing-mobile/2;
+  margin-bottom: $section-spacing-mobile/2;
+
+  @include media-breakpoint-up(sm){
+    padding-bottom: $section-spacing-desktop/2;
+    margin-bottom: $section-spacing-desktop/2;
+  }
+
+  .section-title {
+    position: relative;
+
+    .anchor {
+      position: absolute;
+      top: -100px;
+    }
+  }
+
 }
 
 footer {
-  @extend .container;
+
 }
