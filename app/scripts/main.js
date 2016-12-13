@@ -41,4 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   handleOrientationChange(mql);
 
+  // Tooltips
+  $('[data-toggle="tooltip"]').tooltip(); 
+
 })
