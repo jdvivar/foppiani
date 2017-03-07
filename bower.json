@@ -1,9 +1,0 @@
-{
-  "name": "foppiani",
-  "private": true,
-  "dependencies": {
-    "modernizr": "2.8.1",
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7"
-  }
-}
