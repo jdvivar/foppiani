@@ -1,0 +1,85 @@
+nav {
+  background-color: $nav-color;
+  border-bottom: 10px solid darken($nav-color, 10%);
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 10;
+
+  @include media-breakpoint-up(sm){
+    box-sizing: content-box;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .logo {
+    padding: 40px 0;
+    @include media-breakpoint-up(sm){
+      padding: 20px 0;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    left: 15px;
+    line-height: 60px;
+    // margin-top: -8px;
+
+    @include media-breakpoint-up(sm){
+      display: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($brand-primary, 20%);
+    }
+  }
+
+  a {
+    padding: 10px 0;
+    @include media-breakpoint-up(sm){
+      display: inline-block;
+      vertical-align: middle;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($brand-primary, 20%);
+      }
+    }
+
+    &.section-link {
+      display: none;
+      text-align: left;
+      font-family: 'Fjalla One', sans-serif;
+      text-transform: uppercase;
+      // padding-right: 25px;
+      @include media-breakpoint-up(sm){
+        padding-top: 50px;
+        margin-top: -40px;
+        max-width: 90px;
+        margin-left: 50px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .lang-selector {
+    // display: none;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include media-breakpoint-up(sm){
+      float: right;
+      position: relative;
+    }
+  }
+}

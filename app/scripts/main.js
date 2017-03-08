@@ -42,6 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
   handleOrientationChange(mql);
 
   // Tooltips
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // js-get
+  $('.js-get').each( function() {
+    var self = $(this);
+    $.get($(this).data("url")).done(
+      function(data) {
+        self.append(new XMLSerializer().serializeToString(data));
+      }
+    );
+  });
 
 })
