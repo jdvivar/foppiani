@@ -50,7 +50,7 @@ body {
 
 hr {
   @extend .container;
-  border-color: darken($nav-color, 10%);
+  border-color: darken($brand-primary, 10%);
   border-width: 10px;
 }
 
