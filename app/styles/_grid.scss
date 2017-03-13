@@ -11,5 +11,13 @@
   .grid-item {
     max-width: 217px;
     margin: 15px;
+    border: 2px solid darken($brand-primary, 20%);
+    padding: 3px;
+    border-radius: 2px;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 2px solid darken($green, 10%);
+    }
   }
 }
