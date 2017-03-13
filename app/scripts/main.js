@@ -47,11 +47,46 @@ document.addEventListener('DOMContentLoaded', function() {
   // js-get
   $('.js-get').each( function() {
     var self = $(this);
-    $.get($(this).data("url")).done(
+    $.get($(this).data('url')).done(
       function(data) {
         self.append(new XMLSerializer().serializeToString(data));
       }
     );
   });
+
+  // Gallery
+  var pswpElement = document.querySelectorAll('.pswp')[0];
+
+  // build items array
+  var items = [
+      {
+          src: 'http://placehold.it/350x150',
+          w: 300,
+          h: 150
+      },
+      {
+          src: 'http://placehold.it/400x400',
+          w: 400,
+          h: 400
+      }
+  ];
+
+  // define options (if needed)
+  var options = {
+      // optionName: 'option value'
+      // for example:
+      index: 0 // start at first slide
+  };
+
+  // Initializes and opens PhotoSwipe
+  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+  // gallery.init();
+
+
+  // Grid
+  // $('.grid').masonry({
+  //   itemSelector: '.grid-item',
+  //   columnWidth: 200
+  // });
 
 })

@@ -11,6 +11,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/photoswipe/dist/photoswipe.css" />
+    <link rel="stylesheet" href="/bower_components/photoswipe/dist/default-skin/default-skin.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -53,6 +55,92 @@
         <div class=notice>Ci stiamo rifacendo il look. Torniamo presto.</div>
         <h1>Service description</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="grid row" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+          <img class="grid-item" src="/images/optimised/001.jpg"/>
+          <img class="grid-item" src="/images/optimised/002.jpg"/>
+          <img class="grid-item" src="/images/optimised/003.jpg"/>
+          <img class="grid-item" src="/images/optimised/004.jpg"/>
+          <img class="grid-item" src="/images/optimised/005.jpg"/>
+          <img class="grid-item" src="/images/optimised/006.jpg"/>
+          <img class="grid-item" src="/images/optimised/007.jpg"/>
+          <img class="grid-item" src="/images/optimised/008.jpg"/>
+          <img class="grid-item" src="/images/optimised/009.jpg"/>
+          <img class="grid-item" src="/images/optimised/010.jpg"/>
+          <img class="grid-item" src="/images/optimised/011.jpg"/>
+          <img class="grid-item" src="/images/optimised/012.jpg"/>
+          <img class="grid-item" src="/images/optimised/013.jpg"/>
+          <img class="grid-item" src="/images/optimised/014.jpg"/>
+          <img class="grid-item" src="/images/optimised/015.jpg"/>
+          <img class="grid-item" src="/images/optimised/016.jpg"/>
+          <img class="grid-item" src="/images/optimised/017.jpg"/>
+          <img class="grid-item" src="/images/optimised/018.jpg"/>
+        </div>
+      </div>
+      <!-- Root element of PhotoSwipe. Must have class pswp. -->
+      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+          <!-- Background of PhotoSwipe.
+               It's a separate element as animating opacity is faster than rgba(). -->
+          <div class="pswp__bg"></div>
+
+          <!-- Slides wrapper with overflow:hidden. -->
+          <div class="pswp__scroll-wrap">
+
+              <!-- Container that holds slides.
+                  PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                  Don't modify these 3 pswp__item elements, data is added later on. -->
+              <div class="pswp__container">
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+              </div>
+
+              <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+              <div class="pswp__ui pswp__ui--hidden">
+
+                  <div class="pswp__top-bar">
+
+                      <!--  Controls are self-explanatory. Order can be changed. -->
+
+                      <div class="pswp__counter"></div>
+
+                      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                      <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                      <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                      <!-- element will get class pswp__preloader--active when preloader is running -->
+                      <div class="pswp__preloader">
+                          <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                              <div class="pswp__preloader__donut"></div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                      <div class="pswp__share-tooltip"></div>
+                  </div>
+
+                  <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                  </button>
+
+                  <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                  </button>
+
+                  <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                  </div>
+
+              </div>
+
+          </div>
+
       </div>
     </main>
     <hr>
@@ -209,6 +297,15 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/photoswipe/dist/photoswipe.js"></script>
+    <script src="/bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
+    <script src="/bower_components/get-size/get-size.js"></script>
+    <script src="/bower_components/ev-emitter/ev-emitter.js"></script>
+    <script src="/bower_components/desandro-matches-selector/matches-selector.js"></script>
+    <script src="/bower_components/fizzy-ui-utils/utils.js"></script>
+    <script src="/bower_components/outlayer/outlayer.js"></script>
+    <script src="/bower_components/masonry/masonry.js"></script>
+    <script src="/bower_components/imagesloaded/imagesloaded.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

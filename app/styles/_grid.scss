@@ -1,0 +1,15 @@
+.grid {
+
+  max-height: 300px;
+  overflow-y: scroll;
+
+  @include media-breakpoint-up(sm){
+    max-height: none;
+    overflow: auto;
+  }
+
+  .grid-item {
+    max-width: 217px;
+    margin: 15px;
+  }
+}
